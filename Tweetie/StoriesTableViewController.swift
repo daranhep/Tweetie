@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class StoriesTableViewController: UITableViewController
 {
-    // MARK: - Properties
+    // Properties
+    var stories = [Story]()
+    let storiesRef = FIRDatabase.database().reference().child("stories")
     
     @IBOutlet weak var composeBarButtonItem: UIBarButtonItem!
     
@@ -20,6 +23,18 @@ class StoriesTableViewController: UITableViewController
         // TODO: download our new stories here
         // (1) download data from the reference every time it gets called
         // (2) automatically download data from the reference every time
+        storiesRef.observe(.value, with: { snapshot in
+            self.stories.removeAll()
+            
+            for child in snapshot.children {
+                let story = Story(snapshot: child as! FIRDataSnapshot)
+                self.stories.insert(story, at: 0)
+            }
+            
+            self.tableView.reloadData()
+        })
+        
+        
     }
     
     override func viewDidLoad()
@@ -48,13 +63,14 @@ class StoriesTableViewController: UITableViewController
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         // TODO: return the stories count
-        return 0
+        return stories.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Story Cell", for: indexPath) as! StoryTableViewCell
 
         // TODO: assign a story for the cell
+        cell.story = stories[(indexPath as NSIndexPath).row]
 
         return cell
     }

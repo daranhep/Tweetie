@@ -16,6 +16,7 @@
 		52B1CCC81CC5A06F00043C86 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1CCC51CC5A06F00043C86 /* ComposeViewController.swift */; };
 		52B1CCCB1CC5A08100043C86 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1CCCA1CC5A08100043C86 /* StoryTableViewCell.swift */; };
 		52B1CCCF1CC5A47D00043C86 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1CCCE1CC5A47D00043C86 /* Story.swift */; };
+		E0F078C61EBA62A30088D52A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0F078C51EBA62A20088D52A /* GoogleService-Info.plist */; };
 		E74A0C025C728532BD48D9C8 /* Pods_Tweetie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D38D0CA7546117920F0A190 /* Pods_Tweetie.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,8 @@
 		52B1CCCE1CC5A47D00043C86 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		58B7AF3EDCC00F98B133D340 /* Pods-Tweetie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tweetie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tweetie/Pods-Tweetie.debug.xcconfig"; sourceTree = "<group>"; };
 		6D38D0CA7546117920F0A190 /* Pods_Tweetie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tweetie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E066416B1EBA6FB5006330EE /* Tweetie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tweetie.entitlements; sourceTree = "<group>"; };
+		E0F078C51EBA62A20088D52A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +83,14 @@
 		52B1CCB01CC5A03A00043C86 /* Tweetie */ = {
 			isa = PBXGroup;
 			children = (
+				E066416B1EBA6FB5006330EE /* Tweetie.entitlements */,
 				52B1CCB11CC5A03A00043C86 /* AppDelegate.swift */,
 				52B1CCD01CC5A48300043C86 /* Model */,
 				52B1CCCC1CC5A08300043C86 /* Views */,
 				52B1CCC91CC5A07300043C86 /* Controllers */,
 				52B1CCB81CC5A03A00043C86 /* Assets.xcassets */,
 				52B1CCBA1CC5A03A00043C86 /* LaunchScreen.storyboard */,
+				E0F078C51EBA62A20088D52A /* GoogleService-Info.plist */,
 				52B1CCBD1CC5A03A00043C86 /* Info.plist */,
 			);
 			path = Tweetie;
@@ -133,12 +138,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52B1CCC01CC5A03A00043C86 /* Build configuration list for PBXNativeTarget "Tweetie" */;
 			buildPhases = (
+				81D9917180838BFD48BC5A40 /* 📦 Check Pods Manifest.lock */,
 				DBD881D475EE9E228A5DBD7B /* [CP] Check Pods Manifest.lock */,
 				52B1CCAA1CC5A03A00043C86 /* Sources */,
 				52B1CCAB1CC5A03A00043C86 /* Frameworks */,
 				52B1CCAC1CC5A03A00043C86 /* Resources */,
 				FED74177D8E3881498A76814 /* [CP] Embed Pods Frameworks */,
 				62A424EAAFDC1C7F1EA3EFC4 /* [CP] Copy Pods Resources */,
+				7C9DFEA8DCB01933321D8435 /* 📦 Embed Pods Frameworks */,
+				8501AF78BEB83BF4329E6C87 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,7 +169,7 @@
 				TargetAttributes = {
 					52B1CCAD1CC5A03A00043C86 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 593ZXM85A3;
+						DevelopmentTeam = 825KNZSNMQ;
 						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -195,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B1CCBC1CC5A03A00043C86 /* LaunchScreen.storyboard in Resources */,
+				E0F078C61EBA62A30088D52A /* GoogleService-Info.plist in Resources */,
 				52B1CCB91CC5A03A00043C86 /* Assets.xcassets in Resources */,
 				52B1CCB71CC5A03A00043C86 /* Main.storyboard in Resources */,
 			);
@@ -211,6 +220,51 @@
 			inputPaths = (
 			);
 			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tweetie/Pods-Tweetie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C9DFEA8DCB01933321D8435 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tweetie/Pods-Tweetie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81D9917180838BFD48BC5A40 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8501AF78BEB83BF4329E6C87 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,8 +354,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -346,8 +402,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -377,10 +435,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Tweetie/Tweetie.entitlements;
-				DEVELOPMENT_TEAM = 593ZXM85A3;
+				DEVELOPMENT_TEAM = 825KNZSNMQ;
 				INFOPLIST_FILE = Tweetie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.developersacademy.Tweetie;
+				PRODUCT_BUNDLE_IDENTIFIER = io.Tweetie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -392,10 +450,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Tweetie/Tweetie.entitlements;
-				DEVELOPMENT_TEAM = 593ZXM85A3;
+				DEVELOPMENT_TEAM = 825KNZSNMQ;
 				INFOPLIST_FILE = Tweetie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.developersacademy.Tweetie;
+				PRODUCT_BUNDLE_IDENTIFIER = io.Tweetie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
